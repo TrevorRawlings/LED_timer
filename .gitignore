@@ -2,3 +2,5 @@ eagle/schematic.b#*
 eagle/schematic.s#*
 datasheets/**/*
 images/**/*
+mplab/LED.X/build/*
+mplab/LED.X/dist/*
