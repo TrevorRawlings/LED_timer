@@ -12,13 +12,15 @@
 
 // Based on example 12-1 on page 102 of the datasheet
 //
-// T1 is a 16bit counter. We'll use interupt when the counter overflows from 
-// 0xFFFF -> 0x0000 to update the RTC. The timer is being supplied with a 8192Hz
-// clock so will take 8 seconds to overflow. 
+// T1 is a 16bit counter. We'll use interrupt when the counter overflows from 
+// 0xFFFF -> 0x0000. The timer is being supplied with a 8192Hz clock so will 
+// take 8 seconds to overflow. 
 //
-// If we an interrupt every second, so need to preload the counters high byte.  
-// We're reducing T1 from a 16-bit to a 13-bit counter
-// => 0xFFFF - 8191 = 0xE000 i.e. we're ignoring the top 3 bit of the counter
+// Since we want an interrupt every second we need to preload the counter's 
+// high byte so that it overflows sooner.
+// => 0xFFFF - 8191 = 0xE000 
+// I.e. we're reducing T1 from a 16-bit to a 13-bit counter buy ignoring the top
+// 3 bits
 #define T1_HIGH_BYTE_RELOAD 0xE0
 
 unsigned short long remaining_seconds;
@@ -31,13 +33,15 @@ void configure_timer(unsigned short long seconds) {
     INTCONbits.GIEL = 1;
     T1CONbits.T1CKPS1 = 0;
     T1CONbits.T1CKPS0 = 0;
-    T1CONbits.TMR1CS = 0; // Use Internal clock (Fosc/4), 32,768 kHz / 4 = 8192Hz 
+    T1CONbits.TMR1CS = 0; // Use Internal clock (Fosc/4). 32,768 kHz / 4 = 8192Hz 
    
-    // Timer1 overflow interrupt
+    // Enable Timer1 overflow interrupt
     PIE1bits.TMR1IE = 1;
    
-    TMR1H = T1_HIGH_BYTE_RELOAD;
-    TMR1L = 0x00;    
+    TMR1H = T1_HIGH_BYTE_RELOAD;  // We can safely modify this register while 
+                                  // the timer is running
+    TMR1L = 0x00;                 // Modifying this register while T1 is running 
+                                  // would introduce timing inaccuracies   
     T1CONbits.TMR1ON = 1; // Enables Timer1
 }
 
@@ -55,7 +59,8 @@ void interrupt isr(void)
             T1CONbits.TMR1ON = 0; // Disables Timer1
         }
         
-        // Update after we've cleared TMR1ON so that we don't do another heat beat 
+        // Update remaining_seconds after we've cleared TMR1ON so that wait() 
+        // does not do another heat beat at the end of the wait period
         remaining_seconds = new_remaining_seconds;
     }
 }
