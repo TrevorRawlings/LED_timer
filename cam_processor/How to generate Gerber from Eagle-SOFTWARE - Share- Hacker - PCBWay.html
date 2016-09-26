@@ -1,0 +1,877 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0074)http://www.pcbway.com/project/share/How_to_generate_Gerber_from_Eagle.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>
+        How to generate Gerber from Eagle-SOFTWARE
+        - Share- Hacker - PCBWay</title>
+    <link href="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/common.css" type="text/css" rel="stylesheet">
+    <link href="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/headerfooter.css" type="text/css" rel="stylesheet">
+    <link href="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/index.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/easyui.css">
+    <link rel="stylesheet" type="text/css" href="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/icon.css">
+    <link media="screen" rel="stylesheet" href="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/colorbox.css">
+
+    <script id="facebook-jssdk" src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/sdk.js"></script><script type="text/javascript" src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/jquery-1.6.4.min.js"></script>
+
+    <script src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/jquery.easyui.min.js" type="text/javascript"></script>
+
+    <script src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/checkform-en.js" type="text/javascript"></script>
+
+    <script src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/easyui-lang-en.js" charset="utf-8" type="text/javascript"></script>
+
+    <script src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/jquery.colorbox.js" type="text/javascript"></script>
+
+    <script src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/drawimage.js" type="text/javascript"></script>
+
+    <script src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/common.js" type="text/javascript"></script>
+
+    <script language="javascript" type="text/javascript" src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/quote.js"></script>
+
+    <script language="javascript" src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/login.js"></script>
+
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+<body>
+    
+<div id="header">
+    
+    <div class="top cc">
+        <h1 class="slogan">
+            The Instructables for design, creativity and innovation on the Tecnology</h1>
+        <ul class="right pull-right">
+            <li class="logued"><a href="http://www.pcbway.com/project/member/">
+                </a></li>
+            <li class="nav-icon-link my-messages current">
+                <!--有信息 加current-->
+                <a title="Private Messages" id="myMessages" href="http://www.pcbway.com/project/member/follow.aspx"><span class="icon-nav-link icon-my-messages icon"></span><span class="my-messages">Messages</span>
+                    <span class="unread-count">
+                        0</span> </a></li>
+            <li class="dropdown account j-account-open"><a href="http://www.pcbway.com/project/member/" class="dropdown-link user-account">
+                <span class="user-name">
+                    </span>
+                <img title="" src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/userpic.png" width="100px" height="100px" onerror="this.src=&quot;/img/images/userpic.png&quot;" class="user-image">
+            </a>
+                <ul class="dropdown-menu ">
+                    <!--鼠标划上 加remove-current-->
+                    <li>
+                    <a href="http://www.pcbway.com/project/member/">My Project</a>
+                    <a href="http://www.pcbway.com/project/member/myinfo.aspx">Edit my account</a>
+                    </li>
+                    <li><a href="http://www.pcbway.com/project/member/invite/earn.aspx">My Earn</a>
+                    <a href="http://www.pcbway.com/project/member/invite/invite.aspx">My Invite</a></li>
+                        <li class="last-item"><a href="http://www.pcbway.com/project/logout.aspx">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="main">
+       <div class="logo">
+            <a title="Custom PCB Prototype Manufacturer" href="http://www.pcbway.com/">PCBWay</a>
+        </div>
+      
+        
+       
+        <ul class="menui right">
+            <li class="active"><a href="http://www.pcbway.com/project/">Home</a></li>
+            <li><a href="http://www.pcbway.com/project/share/">Projects</a></li>
+            <li><a href="http://www.pcbway.com/blog/">Blog</a></li>
+            <li class="submit"><a class="bold" href="http://www.pcbway.com/project/member/publish.aspx">Publish new project</a>
+            </li>
+            <li class="search"><span class="bt-search icon"></span></li>
+        </ul>
+        <div class="search-text">
+            <!--class="visible"-->
+            <form action="http://www.pcbway.com/project/search.aspx" method="get" id="search-text" onsubmit="return CheckSubmit();">
+            <input type="text" class="text" id="keyword" name="keyword" value="Pls input keyword">
+            <button class="bt-search icon" name="sub" type="submit">
+            </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" language="javascript">
+
+    $(function() {
+        $("#keyword").click(function() {
+            var value = $(this).val();
+            if (value == "Pls input keyword")
+                $(this).val("");
+           
+        });
+        $('.dropdown').hover(function() {
+            $(".dropdown-menu").addClass("remove-current");
+        }, function() {
+            $(".dropdown-menu").removeClass("remove-current");
+        });
+
+        $(".search,.search-text").click(function(e) {
+            if (e && e.stopPropagation) {
+                //W3C取消冒泡事件
+                e.stopPropagation();
+            } else {
+                //IE取消冒泡事件
+                window.event.cancelBubble = true;
+            }
+
+            $(".search-text").addClass("visible");
+
+        });
+    });
+
+    function CheckSubmit() {
+        if ($("#keyword").val() == "" || $("#keyword").val() == "Pls input keyword") {
+            $("#keyword").val("Pls input keyword");
+            alert("Pls input keyword!");
+            return false;
+        } else if ($("#keyword").val().length() < 4) {
+            alert("Keyword must be at least 3 chars!");
+            return false;
+        }
+        return false;
+    }
+
+    $(document).click(function() { //点击除指定input外，隐藏UL
+        $(".search-text").removeClass("visible");
+    }); 
+
+</script>
+
+
+    <div id="content">
+        
+        <div class="project-content">
+            <div class="inner">
+                <div class="cfix gridd no-clear">
+                    <div class="container">
+                        <div class="header-post">
+                            <div class="top">
+                                <h1 itemprop="name" class="x-bold">
+                                    How to generate Gerber from Eagle</h1>
+                                <h2>
+                                    Using EAGLE: Board Layout</h2>
+                                <div class="list-stats">
+                                    <span class="icon-sprite icon-view-count-larger" title="View Count">
+                                        755</span> <a href="http://www.pcbway.com/project/share/How_to_generate_Gerber_from_Eagle.html#msgForm"><span class="icon-sprite icon-comment-with-hover oi-font-color-grey" title="Comments" id="comment_count">
+                                            0</span></a> <span class="icon-sprite icon-view oi-font-color-grey" title="Followers" id="follower_count">
+                                                7</span> <span class="icon-sprite icon-skull oi-font-color-grey" title="Collecters" id="like_count">
+                                                    2</span>
+                                </div>
+                                <ul class="info">
+                                    <li>Total:1
+                                        Steps</li>
+                                    <li>By <strong><a href="http://www.pcbway.com/project/engineer/10/">
+                                        P***En</a></strong></li>
+                                    <li>In <strong><a href="http://www.pcbway.com/project/share/?category=2">
+                                        SOFTWARE</a></strong></li>
+                                </ul>
+                            </div>
+                            <div class="list-share">
+                                <div class="bigtext-line0">
+                                    <a title="Get $20 Cash Back for each additional referral" onclick="Share()" rel="nofollow" href="http://www.pcbway.com/project/share/How_to_generate_Gerber_from_Eagle.html#">$25 Cash Back</a>
+                                </div>
+                                <div>
+                                    <a title="Refer friends and Earn $25" class="form-button-follow button bold" onclick="Share()" rel="nofollow" href="http://www.pcbway.com/project/share/How_to_generate_Gerber_from_Eagle.html#">Refer friends and Earn $25</a></div>
+                            </div>
+                        </div>
+                        <div class="col n-12">
+                            
+                            <div class="entry">
+                                <p>
+                                    pcbway.com
+                                </p>
+                                
+                                        <h4 class="stepde">
+                                            Step
+                                            1:
+                                            Using EAGLE: Board Layout</h4>
+                                        <p>
+	<strong>Generating Gerbers</strong></p>
+<p align="left">
+	When you’ve finalized your design, the last step before sending it off to the fab house is to generate gerber files. Gerber files are kind of a “universal language” for PCB designs. EAGLE is far from the only PCB CAD software out there, and its design files are nothing like those of Orcad or Altium. Fab houses can’t possibly support every piece of software out there, so we send them the gerber files instead.</p>
+<p align="left">
+	Gerber files – note the plurality – each describe single layers of the PCB. One gerber might describe the silkscreen, while another defines where the top copper is. In all, we’ll generate seven gerber files to send to the fab house.</p>
+<p align="left">
+	<strong>CAM Processor</strong></p>
+<p align="left">
+	Before we get too much further, you’ll need to download another definition file:&nbsp;<a href="https://dlnmh9ip6v2uc.cloudfront.net/assets/c/1/9/8/2/52056b19757b7f795b2a561c.zip">SparkFun’s CAM file</a>.</p>
+<p>
+	Then, load up the CAM processor by clicking the CAM icon –&nbsp;&nbsp;– which will open up this window:</p>
+<p>
+	<a class="showpic cboxElement" href="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/174532974.jpg"><img src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/174532974.jpg"></a></p>
+<p align="left">
+	From here, go to the&nbsp;<strong><em>File</em>&nbsp;menu</strong>, then go&nbsp;<strong><em>Open</em>&nbsp;&gt;&nbsp;<em>Job…</em></strong>. In the file browser that opens, select the&nbsp;<strong>sfe-gerb274x.cam</strong>file that you just downloaded. Now the CAM processor window should have a series of tabs: “Top Copper”, “Bottom Copper”, “Top Silkscreen”, etc. Each of these tabs define how to create one of the gerber files. Now all you have to do is click&nbsp;<strong><em>Process Job</em></strong>. If you haven’t saved recently, it’ll prompt you to.</p>
+<p align="left">
+	The gerber generation process should be pretty quick. Once it’s run its course, have a look in your project directory, which should have loads of new files in it. In addition to the board (BRD) and schematic (SCH) files, there should now be a .dri, .GBL, .GBO, .GBS, .GML, .gpi, .GTO, .GTP, .GTS, and a .TXT. Meet the Gerbers!</p>
+<table align="center" border="1" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td>
+				<p align="left">
+					<strong>Gerber File</strong></p>
+			</td>
+			<td>
+				<p align="left">
+					<strong>Extension</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p align="center">
+					Bottom Copper</p>
+			</td>
+			<td>
+				<p align="center">
+					GBL</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p align="center">
+					Bottom Silkscreen</p>
+			</td>
+			<td>
+				<p align="center">
+					GBO</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p align="center">
+					Bottom Soldermask</p>
+			</td>
+			<td>
+				<p align="center">
+					GBS</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p align="center">
+					Top Copper</p>
+			</td>
+			<td>
+				<p align="center">
+					GTL</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p align="center">
+					Top Silkscreen</p>
+			</td>
+			<td>
+				<p align="center">
+					GTO</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p align="center">
+					Top Soldermask</p>
+			</td>
+			<td>
+				<p align="center">
+					GTS</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p align="center">
+					Drill File</p>
+			</td>
+			<td>
+				<p align="center">
+					TXT</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p align="center">
+					Drill Station Info File</p>
+			</td>
+			<td>
+				<p align="center">
+					dri</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p align="center">
+					Photoplotter Info File</p>
+			</td>
+			<td>
+				<p align="center">
+					gpi</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p align="center">
+					Mill Layer</p>
+			</td>
+			<td>
+				<p align="center">
+					GML</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p align="center">
+					Top Paste</p>
+			</td>
+			<td>
+				<p align="center">
+					GTP</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<div style="clear:both;">
+	&nbsp;</div>
+<p align="left">
+	<br>
+	&nbsp;</p>
+<p align="left">
+	Delivering the Gerbers</p>
+<p align="left">
+	The process of sending gerber files varies by fab house. Most will ask you to send them a zipped folder of select files. Which gerber files? Check with your fab house again (e.g.&nbsp;<a href="http://www.pcbway.com/project/member/editdetail.aspx?detailId=381&amp;blogId=599&amp;returl=/project/member/publishdetail.aspx?id=599">Advanced Circuits</a>&nbsp;and&nbsp;<a href="http://www.pcbway.com/project/share/How_to_generate_Gerber_from_Eagle.html">OSH Park’s</a>&nbsp;guidelines), but usually you want to send them GTL, GBL, GTS, GBS, GTO, GBO and the TXT files. The GTP file isn’t necessary for the PCB fabrication, but (if your design had SMD parts) it can be used to create a&nbsp;<a href="https://learn.sparkfun.com/tutorials/electronics-assembly/stenciling">stencil</a>.</p>
+<p align="left">
+	<a class="showpic cboxElement" href="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/174630974.jpg"><img src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/174630974.jpg"></a></p>
+<p align="left">
+	&nbsp;</p>
+<p align="left">
+	So zip those gerbers up. Play the&nbsp;<a href="http://www.youtube.com/watch?v=xJqg_-wXnuU">waiting game</a>. And get ready to assemble your very own PCB!</p>
+<p>
+	&nbsp;</p>
+                                    
+                            </div>
+                            <div class="appreciation">
+                                <span onclick="Fav.AddLike(599,this)" class="icon-project-appreciate ccn-appreciation-sprite ">
+                                </span>
+                                <!--点击过后加class  "icon-project-appreciate-thanks"-->
+                            </div>
+                            <div class="section section-discussions last">
+                                <h5 class="j-discussions-title">
+                                    Discussions</h5>
+                                <div id="discussion-list">
+                                    <p>
+                                    </p>
+                                    <form id="msgForm" method="post" action="http://www.pcbway.com/project/share/How_to_generate_Gerber_from_Eagle.html" onsubmit="return $(this).form(&#39;validate&#39;);">
+                                    <div class="signup-holder textarea-holder">
+                                        <textarea class="editable input-comment  inputbox easyui-validatebox validatebox-text validatebox-invalid" data-options="required:true,validType:&#39;length[0,500]&#39;" name="comment" id="comment" placeholder="Sign in or become a member to leave your comment" style="height: 77.6px;"></textarea>
+                                    </div>
+                                    <a class="login-button form-button-follow button show" href="javascript:" onclick="SubMsgForm()">
+                                        comment</a>
+                                    <input type="hidden" name="act" id="actCmt" value="savecmt">
+                                    <input type="hidden" name="blogid" id="blogid" value="599">
+                                    <p>
+                                    </p>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col n-4 sidebar">
+                        <div class="aaside">
+                            
+                            <div class="tuplie">
+                                <a href="javascript:;" id="project-image" class="image-holder imgbig" target="_blank">
+                                    <img src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/174143258.jpg" alt="How to generate Gerber from Eagle">
+                                </a>
+                                <div class="thumbs-holder">
+                                    
+                                            <a class="image-holder thumb " href="javascript:void(0)">
+                                                <img src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/174143258s.jpg" alt="">
+                                            </a>
+                                        
+                                </div>
+                                
+                            </div>
+                            
+                            <form id="Quote" method="post" action="http://www.pcbway.com/orderonline.aspx" onsubmit="return CheckQuote(this)">
+                            <div class="modal-search-wrapper--sm">
+                                <div class="flight-type-select">
+                                    <h3>
+                                        PCB Instant Quote</h3>
+                                </div>
+                                <div class="li-row">
+                                    <div id="flight-departing-label">
+                                        <span class="label">Dimensions:</span>
+                                        <input type="text" name="x" id="circuit-y" placeholder="Length" class="sfTxt">
+                                        <span style="margin: 0 1px; color: #333">X</span>
+                                        <input type="text" name="y" id="circuit-x" placeholder="Width" class="sfTxt">
+                                        <sup style="color: #333; font-size: 12px;">mm</sup>
+                                    </div>
+                                </div>
+                                <div class="li-row">
+                                    <label id="flight-destination-label">
+                                        <span class="label">Quantity:</span>
+                                        <select name="num" id="num" class="sfTxt">
+                                            <option value="">Choose Num (pcs)</option>
+                                            <option value="5">5</option>
+                                            <option value="10">10</option>
+                                            <option value="15">15</option>
+                                            <option value="20">20</option>
+                                            <option value="25">25</option>
+                                            <option value="30">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="75">75</option>
+                                            <option value="100">100</option>
+                                            <option value="-1">100+</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="li-row">
+                                    <label id="flight-destination-label">
+                                        <span class="label">Layers:</span>
+                                        <select name="Layersquote" id="Layersquote" class="sfTxt">
+                                            <option value="">Layers</option>
+                                            <option value="1">1 Layer</option>
+                                            <option selected="selected" value="2">2 Layers</option>
+                                            <option value="4">4 Layers</option>
+                                            <option value="6">6 Layers</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="li-row">
+                                    <label id="flight-destination-label">
+                                        <span class="label">Thickness:</span>
+                                        <select id="Thicknessquote" name="Thicknessquote" class="sfTxt">
+                                            <option value="">Thickness</option>
+                                            <option value="0.4">0.4mm</option>
+                                            <option value="0.6">0.6mm</option>
+                                            <option value="0.8">0.8mm</option>
+                                            <option value="1.0">1.0mm</option>
+                                            <option value="1.2">1.2mm</option>
+                                            <option selected="selected" value="1.6">1.6mm</option>
+                                            <option value="2.0">2.0mm</option>
+                                            <option value="2.4">2.4mm</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="li-row">
+                                    <input type="submit" name="QuoteNow" value="Quote Now" id="QuoteNow" class="btnlarge">
+                                </div>
+                            </div>
+                            </form>
+                            <p>
+                                Project By</p>
+                            <div class="sidebar-content cfix">
+                                <div class="cfix" id="owner-icon-info">
+                                    <div class="user-img-50 left" id="owner-icon">
+                                        <a href="http://www.pcbway.com/project/engineer/10/">
+                                            <img src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/150332403s.jpg" onerror="this.src=&quot;/project/img/pic/1385437844126.jpg&quot;" class="js-mini-profile"></a>
+                                    </div>
+                                    <div class="left" id="owner-info">
+                                        <div class="cfix" id="owners">
+                                            <a href="http://www.pcbway.com/project/engineer/10/" class="txtellipsis" id="owner"><span>
+                                                P***En</span></a></div>
+                                        <!-- #owners -->
+                                         
+                                        <div id="owner-location-container">
+                                            <a href="http://www.pcbway.com/project/engineer/?country=231" target="_blank" class="location-link txtellipsis icon-sprite">
+                                               
+                                                <img src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/10.gif">
+                                              
+                                                UNITED STATES OF AMERICA</a></div>
+                                                  
+                                    </div>
+                                    <!-- #owner-info -->
+                                </div>
+                                <!-- /#owner-icon-info -->
+                                <div class="clear" id="owner-buttons-container">
+                                    <div class="action-follow-user">
+                                        <a class="form-button-follow button unfollow" onclick="Follow.Add(10,this)">
+                                            Follow</a>
+                                    </div>
+                                    <div class="add-to-collection " onclick="Fav.Add(599,this)">
+                                        Collection</div>
+                                </div>
+                                <div class="sect">
+                                    <div class="special-tags">
+                                        <a href="http://www.pcbway.com/project/share/?category=2" class="tag tag-software">
+                                            SOFTWARE</a>
+                                    </div>
+                                    <div class="special-tags">
+                                        <a href="http://www.pcbway.com/project/share/?status=2" class="tag tag-completed project">
+                                            Completed project</a>
+                                    </div>
+                                    <div class="list-tags cfix">
+                                        <ul>
+                                            
+                                                    <li><a href="javascript:;">
+                                                        Gerber</a></li>
+                                                
+                                                    <li><a href="javascript:;">
+                                                        Eagle</a></li>
+                                                
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sect mt10">
+                                    <h5 class="mt10">
+                                        Team</h5>
+                                    <div class="list-tags cfix">
+                                        <ul>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="section section-project-time">
+                                    <p class="project-time">
+                                        This project was created on
+                                        5/5/2015 5:42:47 PM
+                                    </p>
+                                </div>
+                               <p style="color:#777;font-size:13px">Project Copyright for members, <br>Report contact: service(at)pcbway.com </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block-directory-ad">
+        <div class="inner">
+            <div class="relatedp">
+                <h4 class="heading-h4">
+                    <strong class="bold">RELATED PROFILES</strong></h4>
+                
+                        <div class="citem">
+                            <div class="citemtop">
+                                <a href="http://www.pcbway.com/project/share/discover_the_potential.html" target="_blank">
+                                    <img width="280" height="210" src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/170943119m.jpg"></a>
+                                <div class="citemtxt">
+                                    <a class="citemtitle" href="http://www.pcbway.com/project/share/discover_the_potential.html" target="_blank">
+                                        discover the potential</a>
+                                </div>
+                            </div>
+                            <div class="citemqt">
+                                <span class="yy-icon yy-view">
+                                    132</span> <span class="yy-icon yy-comment">
+                                        0</span> <a class="yy-icon yy-like" href="http://www.pcbway.com/project/share/How_to_generate_Gerber_from_Eagle.html###"><span class="likecount">
+                                            0</span></a>
+                            </div>
+                            <div class="citemqt citemfoot">
+                                <div class="citemzl">
+                                    <a href="http://www.pcbway.com/project/share/How_to_generate_Gerber_from_Eagle.html#" target="_blank" class="citemfimg"></a><a href="http://www.pcbway.com/project/engineer/18918/" target="_blank" class="citemfimg">
+                                        <img onload="DrawImage(this,24,24)" width="24" height="24" src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/1385437844126.jpg" onerror="this.src=&quot;/project/img/pic/1385437844126.jpg&quot;">
+                                        <span class="txtellipsis">
+                                            </span></a>
+                                </div>
+                                <span class="fcfield"><a href="http://www.pcbway.com/project/share/discover_the_potential.html">
+                                    Completed project</a></span>
+                            </div>
+                        </div>
+                    
+                        <div class="citem">
+                            <div class="citemtop">
+                                <a href="http://www.pcbway.com/project/share/Fusebit_programmer.html" target="_blank">
+                                    <img width="280" height="210" src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/231038267m.jpg"></a>
+                                <div class="citemtxt">
+                                    <a class="citemtitle" href="http://www.pcbway.com/project/share/Fusebit_programmer.html" target="_blank">
+                                        Fusebit programmer</a>
+                                </div>
+                            </div>
+                            <div class="citemqt">
+                                <span class="yy-icon yy-view">
+                                    234</span> <span class="yy-icon yy-comment">
+                                        0</span> <a class="yy-icon yy-like" href="http://www.pcbway.com/project/share/How_to_generate_Gerber_from_Eagle.html###"><span class="likecount">
+                                            0</span></a>
+                            </div>
+                            <div class="citemqt citemfoot">
+                                <div class="citemzl">
+                                    <a href="http://www.pcbway.com/project/share/How_to_generate_Gerber_from_Eagle.html#" target="_blank" class="citemfimg"></a><a href="http://www.pcbway.com/project/engineer/8231/" target="_blank" class="citemfimg">
+                                        <img onload="DrawImage(this,24,24)" width="24" height="24" src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/1385437844126.jpg" onerror="this.src=&quot;/project/img/pic/1385437844126.jpg&quot;">
+                                        <span class="txtellipsis">
+                                            C***es</span></a>
+                                </div>
+                                <span class="fcfield"><a href="http://www.pcbway.com/project/share/Fusebit_programmer.html">
+                                    Completed project</a></span>
+                            </div>
+                        </div>
+                    
+                        <div class="citem">
+                            <div class="citemtop">
+                                <a href="http://www.pcbway.com/project/share/MirrorHit_v2_0.html" target="_blank">
+                                    <img width="280" height="210" src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/010602531m.jpg"></a>
+                                <div class="citemtxt">
+                                    <a class="citemtitle" href="http://www.pcbway.com/project/share/MirrorHit_v2_0.html" target="_blank">
+                                        MirrorHit v2.0</a>
+                                </div>
+                            </div>
+                            <div class="citemqt">
+                                <span class="yy-icon yy-view">
+                                    240</span> <span class="yy-icon yy-comment">
+                                        0</span> <a class="yy-icon yy-like" href="http://www.pcbway.com/project/share/How_to_generate_Gerber_from_Eagle.html###"><span class="likecount">
+                                            0</span></a>
+                            </div>
+                            <div class="citemqt citemfoot">
+                                <div class="citemzl">
+                                    <a href="http://www.pcbway.com/project/share/How_to_generate_Gerber_from_Eagle.html#" target="_blank" class="citemfimg"></a><a href="http://www.pcbway.com/project/engineer/5520/" target="_blank" class="citemfimg">
+                                        <img onload="DrawImage(this,24,24)" width="18" height="24" src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/165449009s.jpg" onerror="this.src=&quot;/project/img/pic/1385437844126.jpg&quot;">
+                                        <span class="txtellipsis">
+                                            h***ar</span></a>
+                                </div>
+                                <span class="fcfield"><a href="http://www.pcbway.com/project/share/MirrorHit_v2_0.html">
+                                    Completed project</a></span>
+                            </div>
+                        </div>
+                    
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="mbId" value="21284">
+    
+<div id="footer">
+    <div class="box-social">
+        <div class="list-follow">
+   
+        </div>
+    </div>
+    <div class="box-featured">
+        <div class="inner grid">
+            <h4>
+                The PCB<span>Way</span>ards that recognize the talent and effort of the best electron
+                designers in the World.</h4>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="inner">
+            <div class="left">
+                <div class="copy">
+                    © COPYRIGHT 2014</div>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="http://www.pcbway.com/about.html">About us</a></li>
+                    <li><a href="http://www.pcbway.com/contact.html">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script language="javascript" src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/stat.aspx"></script><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/lUqP5iIjiw6.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/lUqP5iIjiw6(1).html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div><script language="javascript" src="http://counter.seekic.com/counter.aspx?sitecode=396007fadd0fca6b&amp;visitor=396007fadd0fca6b-20167271018208-86304544&amp;visitedtimes=3&amp;pcfristtoday=0&amp;referrer=https%3A//www.google.com/&amp;visitpage=http%3A//www.pcbway.com/project/share/How_to_generate_Gerber_from_Eagle.html"></script> 
+<!-- Google Code for 2014.8.29 -->
+<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 979640469;
+var google_conversion_label = "hNeeCIP5ilYQlcGQ0wM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/conversion.js">
+</script><iframe name="google_conversion_frame" title="Google conversion frame" width="300" height="13" src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/saved_resource.html" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></iframe>
+<noscript>
+&lt;div style="display:inline;"&gt;
+&lt;img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/979640469/?value=1.00&amp;amp;currency_code=CNY&amp;amp;label=hNeeCIP5ilYQlcGQ0wM&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+&lt;/div&gt;
+</noscript>
+   <script src="./How to generate Gerber from Eagle-SOFTWARE - Share- Hacker - PCBWay_files/Stat.js" type="text/javascript"></script>
+
+
+
+
+<script type="text/javascript" language="javascript">
+
+    $(function(){
+         Comment.Init();
+         $(".image-holder").mouseover(function(){
+         $(this).parent().parent().parent().find(".imgbig").find("img").attr("src",$(this).find("img").attr("src").replace("s.","."));
+         });
+         
+        //$("img").colorbox({ rel: 'pic', transition: "none", width: "75%", height: "75%" });
+        $(".showpic").colorbox();
+        
+        $(".view-all-projects").click(function(){
+            $(".image-holder").show();
+            $(this).remove();
+        })
+    });
+    function SubMsgForm() {
+    if(21284==0){
+         Login.ShowLoginHtml();
+    }else{
+        $("#msgForm").submit();
+    }}
+
+    var Comment={
+        TotalPage:'0',
+        NowPage:1,
+        SeeMore:'<div class="form-button-see-more"  onclick="Comment.LoadMore();">See More <span class="darr">↓</span></div>',
+        Waiting:'<div class="form-button-loading"><img src="/project/img/images/loading022.gif"></div>',
+        Init:function(){
+            if(Comment.TotalPage>Comment.NowPage){
+                $(".last").append(Comment.SeeMore);
+            }
+        },
+        LoadMore:function(){
+            $(".form-button-see-more").remove();
+            $(".last").append(Comment.Waiting);
+            Comment.NowPage++;
+            $.ajax({
+                    type: "get",
+                    dataType:"json",
+                    url: "/project/web/detail.aspx?act=getcmt&blogid=599&page="+Comment.NowPage,
+                    beforeSend: function(XMLHttpRequest){
+                    },
+                    success: function(data){
+                    if(data.total==0){
+                        alert("no data");
+                        $(".form-button-loading").remove();
+                    }
+                    var content = "";
+                    
+                      $.each(data.rows, function(i, item) {
+                         content+='<div style="margin-left: 0px;" class="discussions-item">';
+                         content+='<div class="discussions-item-image">';
+                         content+='<a href="/project/engineer/'+item.mbid+'/">';
+                         content+='<img alt="" src="'+(item.headpic==''?'/project/img/pic/1385437844126.jpg':item.headpic)+'" onerror="this.src=/project/img/pic/1385437844126.jpg"></a>';
+                         content+='</div>';
+                         content+='<div class="discussions-item-body">';
+                         content+='<small class="authorship"><a href="/project/engineer/'+item.mbid+'/" id="msg'+item.id+'" name="msg'+item.id+'">';
+                         content+=item.contactname+'</a>'+item.replymb+' • wrote <a href="#j-discussion-9975" class="gray-link">';
+                         content+=item.difftime;
+                         content+='</a></small>';
+                         content+='<p>';
+                         content+=item.msg;
+                         content+='</p>';
+                         content+='<div class="dis-menu">';
+                         content+='<ul>';
+                         content+='<li><span class="updatable">';
+                         content+=item.likecnt+'</span> <a class="voting-action icon-up" href="javascript:;" value='+item.id+' onclick="Comment.Like(this)" title="Upvote">up</a><!--点赞 加class voted-up-->';
+                           content+='<span class="updatable">';
+                         content+=item.unlikecnt+'</span> ';
+                         content+='<a class="voting-action icon-down"  title="Downvote" href="javascript:;" value='+item.id+' onclick="Comment.UnLike(this)" >down</a></li>';
+                         content+='<li class="bullet">•</li>';
+                         content+='<li><a class="discussion-reply discussion-action-link" '+(item.mbid==21284?'style="display:none"':'')+' href="javascript:void(0)" onclick="Comment.ShowReply(this)">Reply</a></li>';
+                         content+=' </ul>';
+                         content+='<form id="msgForm'+item.id+'" action="" method="post">';
+                         content+='<div class="textarea-holder" style="display:none">';
+                         content+='<textarea required="" class="editable input-comment inputbox easyui-validatebox validatebox-text validatebox-invalid" data-options="required:true,validType:\'length[0,500]\'" name="comment" placeholder="Add your reply" style="height: 9.6px;" title=""></textarea>';
+                         content+='<input type="hidden" name="replyMbId" value="'+item.mbid+'">';
+                         content+='<input type="hidden" name="act" value="savecmt">';
+                           content+='<input type="hidden" name="blogid" value="599">';
+                         content+='<input type="submit" value="Post reply" class="button">';
+                         content+='<input type="button" value="Cancel" class="button dium-button" onclick="Comment.HideReply(this)">';
+                         content+=' </div>';
+                         content+='</form>';
+                         content+=' </div>';
+                         content+='</div>';
+                         content+='</div>';
+                       });
+                       $(".form-button-loading").remove();
+                       $("#discussion-list").append(content);
+                       
+                        Comment.Init();
+                    },
+                    error: function(){
+                        alert("error");
+                    }
+                });
+        },
+        ShowReply:function(obj){
+        $(obj).parent().parent().parent().find(".textarea-holder").show();
+        },
+        HideReply:function(obj){
+        $(obj).parent().hide();
+        },
+        Like:function(obj){
+         $.post("/project/web/detail.aspx?act=like", { "msgid": $(obj).attr("value"), "type": 1 }, function() {
+            var num = parseInt($.trim($(obj).prev().text()));
+            $(obj).prev().text((++num))
+            $(obj).removeAttr('onclick').removeAttr("style").css("text-decoration", "none").addClass("voted-up");
+            });
+        },
+        UnLike:function(obj){
+         $.post("/project/web/detail.aspx?act=like", { "msgid": $(obj).attr("value"), "type": 0 }, function() {
+            var num = parseInt($.trim($(obj).prev().text()));
+            $(obj).prev().text((++num))
+            $(obj).removeAttr('onclick').removeAttr("style").css("text-decoration", "none").addClass("voted-down");
+            });
+        }
+    };
+    
+    var Fav={
+    AddLike:function(blogId,obj){
+     if(21284==0){
+         Login.ShowLoginHtml();
+    }else{
+      var type = $(obj).hasClass("icon-project-appreciate-thanks")==true?0:1;
+		$.ajax({
+                type: "post",
+                dataType:"json",
+                url: "/project/ajax/ajaxcheck.aspx?act=fav",
+				data:{blogid:blogId,type:type},
+				success: function(data){
+				    if(data.ok){
+					    if(type==1)
+						    {$(obj).addClass("icon-project-appreciate-thanks");
+						    $(".add-to-collection").html("Collectioning").addClass("hasbeenl");
+						    }
+					    else{
+						    $(obj).removeClass("icon-project-appreciate-thanks");
+						    $(".add-to-collection").html("Collection").removeClass("hasbeenl");
+						    }
+				    }else{
+					    alert("failed");
+					    return false;
+				    }
+                },
+                error: function(){
+					alert("error");
+                }
+        });
+        }
+    },
+	Add:function(blogId,obj){
+	 if(21284==0){
+         Login.ShowLoginHtml();
+    }else{
+      var type = $.trim($(obj).html())=="Collection"?1:0;
+		$.ajax({
+                type: "post",
+                dataType:"json",
+                url: "/project/ajax/ajaxcheck.aspx?act=fav",
+				data:{blogid:blogId,type:type},
+				success: function(data){
+				if(data.ok){
+					if(type==1){
+					    $(".icon-project-appreciate").addClass("icon-project-appreciate-thanks");
+						$(obj).html("Collectioning").addClass("hasbeenl");}
+					else{
+						$(obj).html("Collection").removeClass("hasbeenl");
+						$(".icon-project-appreciate").removeClass("icon-project-appreciate-thanks");}
+				}else{
+					alert(data.msg);
+					return false;
+				}
+                },
+                error: function(){
+					alert("error");
+                }
+        });
+        }
+	}
+  }
+  
+   
+  function Share(){
+     if(21284==0){
+         Login.ShowLoginHtml();
+    }else{
+    var url=window.location.href;
+         $.colorbox({ href: '/project/web/colbox/share.aspx?title=How to generate Gerber from Eagle-SOFTWARE- Share- Hacker - PCBWay&url='+url, width: "800", height: "364", iframe: true, opacity: 0.5, transition: "none", overlayClose: false });
+    }
+  }
+</script>
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>

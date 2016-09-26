@@ -1,0 +1,71 @@
+@charset "utf-8";
+@font-face{font-family:'MuseoSans_Fat';src:url('../fonts/museosans_700-webfont.eot') format('embedded-opentype'),url('../fonts/museosans_700-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
+@font-face{font-family:'MuseoSans_Thin';src:url('../fonts/museosans_100-webfont.woff') format('woff'),url('../fonts/museosans_100-webfont.ttf') format('truetype');font-weight:normal;font-style:normal;}
+*{ padding:0; margin:0;}ul,li{ list-style:none;}a{text-decoration:none;}input{border:none; background:none;}textarea{outline:0;}.clear{clear:both;}
+.right{ float:right;}.left{ float:left;}
+.bold{font-family:'MuseoSans_Fat'; font-weight:bold;}
+body,input,button,textarea{border:0 none;font-family:"MuseoSans_Thin",Arial,Helvetica Neue,Helvetica,sans-serif; background:none repeat scroll 0 0 #e1e3e4;color: #313131; font-size:15px;}fieldset, img {
+    border: 0 none;
+}a{color:#3c948b;text-decoration:none;-webkit-transition:color .25s ease-out;transition:color .25s ease-out}a:hover{color:#313131;text-decoration:none}
+.underline{text-decoration:underline}
+.icon-sprite,.icon{ background:url(../images/icons.png) no-repeat 0 0; display:inline-block;*display:inline;*zoom:1;}
+.cfix{zoom:1;}.cfix:after{content:'.';display:block;clear:both;height:0;visibility:hidden;line-height:0;overflow:hidden;}
+.hide{ display:none;}
+.color-green {
+    color: #3c948b;
+}.txtellipsis{display:block; overflow:hidden;white-space: nowrap;text-overflow: ellipsis;}.text-input{display:block;height:40px;padding:0 15px;background:#f4f4f4;border:1px solid #d6d6d6;border-radius:2px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-transition:all .25s;transition:all .25s; line-height:40px;}
+.text-input:focus{outline:0;background-color:#fff}textarea.text-input{padding:15px}
+.textarea-description{display:block;height:60px;padding:0 15px;background:#f4f4f4;border:1px solid #d6d6d6;border-radius:2px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-transition:all .25s;transition:all .25s; line-height:18px;}
+.post-tip {
+    color: #666;
+    font-size: 13px;
+    overflow: hidden;
+}.button{display:inline-block;height:40px;line-height:41px;padding:0 15px;background-color:#3c948b;color:#fff;cursor:pointer;border:0;border-radius:2px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-transition:all .2s linear;transition:all .2s linear}
+.button.large {
+    height: 50px;
+    line-height: 50px;
+}.width-full {
+    width: 100%;
+}.button.bold {
+    font-size: 14px;
+}.bold {
+    font-family: "MuseoSans_Fat";
+    font-weight: normal;
+}.button:hover{opacity:.75;color:#fff}
+#content{ padding-bottom:50px;}
+.grid-site {
+    margin: auto;
+    max-width: 1145px;
+    width: 100%;
+	_width:990px;
+}
+.text-align-center {
+    text-align: center;
+}.yy-icon{
+    background-image: url("../images/yy-icon.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    overflow: hidden;
+}
+.mt10{ margin-bottom:10px;}
+.show{ display:block;}
+.button.gray {
+    background-color: transparent;
+    border: 1px solid #d2d6d5;
+    color: #313131;
+    line-height: 39px;
+}
+.button.unfollow:hover,.button.gray:hover{background-color:#d2d6d5;color:#313131}
+.button.unfollow{background-color:#fff;color:#313131}
+/*page*/
+#pages{ margin-bottom:40px; height:36px;}#pages span{ float:left; margin:0 18px 0 13px; line-height:28px;}#pages a{ width:36px; height:36px; background:#fff; display:block; color:#a9a9a9; line-height:36px; text-align:center; font-family:Arial; float:left; margin-right:5px;transition:background-color 0.2s ease-out}#pages a#pageactive{ background:#3c948b;color:#fff;}#pages a:hover{ background:#969696; color:#fff;}#pageprev span{position:relative; top:8px}#pagenext span{position:relative; top:8px}.yy-pp {
+    background-position: -124px -656px;
+    height: 18px;
+    width: 11px;
+}/*end page*/
+.yy-rotate,.yy-rotatem:hover{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}.yy-rotated{transition:transform ease .3s;-webkit-transition:-webkit-transform ease .3s}	
+
+.ued-404 {
+    margin-left: 400px;
+    padding-top: 60px;
+}hr{ width:60px; margin-bottom:15px; margin-top:50px; border:1px solid #a6abab;}
