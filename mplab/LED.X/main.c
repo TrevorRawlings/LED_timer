@@ -47,13 +47,10 @@ void main(void) {
     
     led_configure();
     delay = read_switches();
-    wait(delay); // delay * 15 * 60
+    wait(delay * 15 * 60);
     
     led_on();
     trigger_LAMP();
-    // output on
     while(1)
-    {
-
-    }
+    { }
 }

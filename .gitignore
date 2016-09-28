@@ -4,3 +4,5 @@ datasheets/**/*
 images/**/*
 mplab/LED.X/build/*
 mplab/LED.X/dist/*
+eagle/.schematic.brd.lck
+eagle/.schematic.sch.lck
