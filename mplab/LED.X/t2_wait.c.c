@@ -24,44 +24,44 @@
 #define T1_HIGH_BYTE_RELOAD 0xE0
 
 unsigned short long remaining_seconds;
+unsigned int remaining_fractions;
 
 void configure_timer(unsigned short long seconds) {
     remaining_seconds = seconds;
+    remaining_fractions = 24;
     
     // Timer 1 Settings
     INTCONbits.GIEH = 1;
     INTCONbits.GIEL = 1;
-    T1CONbits.T1CKPS1 = 0;
-    T1CONbits.T1CKPS0 = 0;
-    T1CONbits.TMR1CS = 0; // Use Internal clock (Fosc/4). 32,768 kHz / 4 = 8192Hz 
-   
+//    T1CONbits.T1CKPS1 = 0;
+//    T1CONbits.T1CKPS0 = 0;
+//    T1CONbits.TMR1CS = 0; // Use Internal clock (Fosc/4). 32,768 kHz / 4 = 8192Hz 
+    
+    T2CONbits.TOUTPS = 5;
+    T2CONbits.T2CKPS = 0;
+
+    PR2 = 249;
+    
     // Enable Timer1 overflow interrupt
-    PIE1bits.TMR1IE = 1;
+    PIE1bits.TMR2IE = 1;
    
-    TMR1H = T1_HIGH_BYTE_RELOAD;  // We can safely modify this register while 
-                                  // the timer is running
-    TMR1L = 0x00;                 // Modifying this register while T1 is running 
-                                  // would introduce timing inaccuracies   
-    T1CONbits.TMR1ON = 1; // Enables Timer1
+    T2CONbits.TMR2ON = 1; // Enables Timer2
 }
 
 void interrupt isr(void)
 {
-    unsigned short long new_remaining_seconds;
-    
-    if (PIR1bits.TMR1IF && PIE1bits.TMR1IE) {
-        PIR1bits.TMR1IF = 0;   
-        
-        new_remaining_seconds = remaining_seconds - 1;
-        if (new_remaining_seconds > 0) {
-            TMR1H = T1_HIGH_BYTE_RELOAD;
+    PIR1bits.TMR2IF = 0;  
+    if (remaining_fractions == 1) {
+        led_on();
+        remaining_fractions = 24;
+        if (remaining_seconds == 1) {
+            T2CONbits.TMR2ON = 0; // Disables Timer2
         } else {
-            T1CONbits.TMR1ON = 0; // Disables Timer1
+            remaining_seconds--;
         }
-        
-        // Update remaining_seconds after we've cleared TMR1ON so that wait() 
-        // does not do another heat beat at the end of the wait period
-        remaining_seconds = new_remaining_seconds;
+    } else {
+        remaining_fractions--;
+        led_off();
     }
 }
 
@@ -88,7 +88,8 @@ void wait(unsigned short long seconds) {
     }
     
     configure_timer(seconds);
-    while(1 == T1CONbits.TMR1ON) {
-        last_heart_beat = heart_beat(last_heart_beat);
+    while(1 == T2CONbits.TMR2ON) {
+      // last_heart_beat = heart_beat(last_heart_beat);
     }
+    led_on();
 }

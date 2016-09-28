@@ -50,7 +50,7 @@
 // 'C' source line config statements
 
 // CONFIG1H
-#pragma config OSC = ECIO       // Oscillator Selection bits (EC oscillator, port function on RA6)
+#pragma config OSC = INTIO1       // Oscillator Selection bits (EC oscillator, port function on RA6)
 #pragma config FSCM = ON        // Fail-Safe Clock Monitor Enable bit (Fail-Safe Clock Monitor enabled)
 #pragma config IESO = ON        // Internal External Switchover bit (Internal External Switchover mode enabled)
 
