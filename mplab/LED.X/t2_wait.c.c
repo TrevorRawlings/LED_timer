@@ -28,7 +28,7 @@ unsigned int remaining_fractions;
 
 void configure_timer(unsigned short long seconds) {
     remaining_seconds = seconds;
-    remaining_fractions = 24;
+    remaining_fractions = 1;
     
     // Timer 1 Settings
     INTCONbits.GIEH = 1;
@@ -37,10 +37,12 @@ void configure_timer(unsigned short long seconds) {
 //    T1CONbits.T1CKPS0 = 0;
 //    T1CONbits.TMR1CS = 0; // Use Internal clock (Fosc/4). 32,768 kHz / 4 = 8192Hz 
     
-    T2CONbits.TOUTPS = 5;
-    T2CONbits.T2CKPS = 0;
+    T2CONbits.T2CKPS = 0; // (1:1) Prescaler 1:1, 1:4, 1:16
+    PR2 = 255;
+    T2CONbits.TOUTPS = 15; // (1:16) Postscaller 1:1 to 1:16
+    
 
-    PR2 = 249;
+    //PR2 = 249;
     
     // Enable Timer1 overflow interrupt
     PIE1bits.TMR2IE = 1;
@@ -51,9 +53,9 @@ void configure_timer(unsigned short long seconds) {
 void interrupt isr(void)
 {
     PIR1bits.TMR2IF = 0;  
-    if (remaining_fractions == 1) {
+    if (remaining_fractions == 0) {
         led_on();
-        remaining_fractions = 24;
+        remaining_fractions = 1;
         if (remaining_seconds == 1) {
             T2CONbits.TMR2ON = 0; // Disables Timer2
         } else {
