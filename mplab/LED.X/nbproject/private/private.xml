@@ -4,10 +4,16 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/E:/projects/ALFA_LED/mplab/LED.X/system.c</file>
+            <file>file:/E:/projects/ALFA_LED/mplab/LED.X/build/default/production/wait.p1</file>
             <file>file:/E:/projects/ALFA_LED/mplab/LED.X/switches.c</file>
             <file>file:/E:/projects/ALFA_LED/mplab/LED.X/main.c</file>
-            <file>file:/E:/projects/ALFA_LED/mplab/LED.X/wait.c</file>
+            <file>file:/E:/projects/ALFA_LED/mplab/LED.X/dist/default/production/LED.X.production.hex</file>
             <file>file:/E:/projects/ALFA_LED/mplab/LED.X/configuration_bits.c</file>
+            <file>file:/E:/projects/ALFA_LED/mplab/LED.X/dist/default/production/LED.X.production.hxl</file>
+            <file>file:/E:/projects/ALFA_LED/mplab/LED.X/dist/default/production/LED.X.production.cmf</file>
+            <file>file:/E:/projects/ALFA_LED/mplab/LED.X/dist/default/production/LED.X.production.lst</file>
+            <file>file:/E:/projects/ALFA_LED/mplab/LED.X/build/default/production/wait.pre</file>
+            <file>file:/E:/projects/ALFA_LED/mplab/LED.X/build/default/production/wait.p1.d</file>
             <file>file:/E:/projects/ALFA_LED/mplab/LED.X/system.h</file>
         </group>
     </open-files>

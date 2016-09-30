@@ -6560,7 +6560,7 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <part name="S2" library="switch-dil" deviceset="P101" device=""/>
 <part name="U2" library="untitled" deviceset="SG-3040LC" device="LC" value="SG-3040LC"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="C3" library="capacitor-wima" deviceset="C" device="2,5-3" value="0.1 uF"/>
+<part name="C3" library="capacitor-wima" deviceset="C" device="2,5-3" value="0.22uF"/>
 <part name="C4" library="SparkFun" deviceset="CAP_POL" device="1206" value="10uF"/>
 <part name="C5" library="SparkFun" deviceset="CAP_POL" device="1206" value="10uF"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
