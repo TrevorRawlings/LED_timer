@@ -28,7 +28,7 @@ unsigned int remaining_fractions;
 
 void configure_timer(unsigned short long seconds) {
     remaining_seconds = seconds - 1;
-    remaining_fractions = 8;
+    remaining_fractions = 1;
     
     // Timer 1 Settings
     INTCONbits.GIEH = 1;
@@ -37,9 +37,9 @@ void configure_timer(unsigned short long seconds) {
 //    T1CONbits.T1CKPS0 = 0;
 //    T1CONbits.TMR1CS = 0; // Use Internal clock (Fosc/4). 32,768 kHz / 4 = 8192Hz 
     
-    T2CONbits.T2CKPS = 0; // (1:1) Prescaler 1:1, 1:4, 1:16
-    PR2 = 255;
-    T2CONbits.TOUTPS = 3; // (1:16) Postscaller 1:1 to 1:16
+    T2CONbits.T2CKPS = 1; // (1:1) Prescaler 1:1, 1:4, 1:16
+    PR2 = 250;
+    T2CONbits.TOUTPS = 15; // (1:16) Postscaller 1:1 to 1:16
     
 
     //PR2 = 249;
@@ -53,9 +53,13 @@ void configure_timer(unsigned short long seconds) {
 void interrupt isr(void)
 {
     PIR1bits.TMR2IF = 0;  
-    if (remaining_fractions == 1) {
-        led_on();
-        remaining_fractions = 8;
+    if (remaining_fractions == 0) {
+        
+            LATAbits.LA0 = 1;
+    
+        
+        
+        remaining_fractions = 1;
         if (remaining_seconds == 0) {
             T2CONbits.TMR2ON = 0; // Disables Timer2
         } else {
@@ -63,7 +67,7 @@ void interrupt isr(void)
         }
     } else {
         remaining_fractions--;
-        led_off();
+        LATAbits.LA0 = 0;
     }
 }
 
