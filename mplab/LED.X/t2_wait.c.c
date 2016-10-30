@@ -28,38 +28,26 @@ unsigned int remaining_fractions;
 
 void configure_timer(unsigned short long seconds) {
     remaining_seconds = seconds - 1;
-    remaining_fractions = 1;
+    remaining_fractions = 8;
     
     // Timer 1 Settings
     INTCONbits.GIEH = 1;
     INTCONbits.GIEL = 1;
-//    T1CONbits.T1CKPS1 = 0;
-//    T1CONbits.T1CKPS0 = 0;
-//    T1CONbits.TMR1CS = 0; // Use Internal clock (Fosc/4). 32,768 kHz / 4 = 8192Hz 
     
-    T2CONbits.T2CKPS = 1; // (1:1) Prescaler 1:1, 1:4, 1:16
-    PR2 = 250;
-    T2CONbits.TOUTPS = 15; // (1:16) Postscaller 1:1 to 1:16
+    T2CONbits.T2CKPS = 0; // (1:1) Prescaler 1:1, 1:4, 1:16
+    PR2 = 255;            
+    T2CONbits.TOUTPS = 3; // (1:16) Postscaller 1:1 to 1:16
     
-
-    //PR2 = 249;
-    
-    // Enable Timer1 overflow interrupt
-    PIE1bits.TMR2IE = 1;
-   
+    PIE1bits.TMR2IE = 1;  // Enable Timer1 overflow interrupt
     T2CONbits.TMR2ON = 1; // Enables Timer2
 }
 
 void interrupt isr(void)
 {
     PIR1bits.TMR2IF = 0;  
-    if (remaining_fractions == 0) {
-        
-            LATAbits.LA0 = 1;
-    
-        
-        
-        remaining_fractions = 1;
+    if (remaining_fractions == 1) {    
+        LATAbits.LA0 = 1;
+        remaining_fractions = 8;
         if (remaining_seconds == 0) {
             T2CONbits.TMR2ON = 0; // Disables Timer2
         } else {
@@ -71,31 +59,14 @@ void interrupt isr(void)
     }
 }
 
-unsigned short long heart_beat(unsigned short long previous_seconds) {
-    unsigned short long seconds = remaining_seconds;
-    
-    if ((seconds != previous_seconds) && (seconds & 0x01)) {
-        led_on();
-        __delay_ms(100);
-        led_off();
-        __delay_ms(100);
-        led_on();
-        __delay_ms(100);
-        led_off();
-    }
-    return seconds;
-}
-
-void wait(unsigned short long seconds) {    
-    unsigned short long last_heart_beat;
-    
+void wait(unsigned short long seconds) {        
     if (seconds == 0) {
         return;
     }
     
     configure_timer(seconds);
     while(1 == T2CONbits.TMR2ON) {
-      // last_heart_beat = heart_beat(last_heart_beat);
+      ;
     }
     led_on();
 }
