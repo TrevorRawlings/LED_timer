@@ -43,11 +43,21 @@
 //           = 89100 seconds (0x15C0C)
                      
 void main(void) {
-    unsigned int delay;
+    unsigned int delay, i;
+    
+   // OSCCONbits.IRCF = 5;
     
     led_configure();
     delay = read_switches();
-    wait(delay * 15 * 60);
+    
+    for (i = 0; i < 10; i++) {
+        led_on();
+        __delay_ms(50);
+        led_off();
+        __delay_ms(50);
+    }
+    
+    wait(delay * 60);
     
     led_on();
     trigger_LAMP();
