@@ -6626,7 +6626,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="R3" library="resistor" deviceset="R-US_" device="0204/2V" value="4.7K"/>
 <part name="VDD5" library="supply1" deviceset="VDD" device=""/>
-<part name="R4" library="resistor" deviceset="R-US_" device="0204/2V" value="1K"/>
+<part name="R4" library="resistor" deviceset="R-US_" device="0204/2V" value=" 523R"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="VDD6" library="supply1" deviceset="VDD" device=""/>
