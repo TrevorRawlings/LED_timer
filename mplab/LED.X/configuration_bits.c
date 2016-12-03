@@ -51,7 +51,7 @@
 
 // CONFIG1H
 #pragma config OSC = EC       // Oscillator Selection bits (EC oscillator, port function on RA6)
-#pragma config FSCM = ON        // Fail-Safe Clock Monitor Enable bit (Fail-Safe Clock Monitor enabled)
+#pragma config FSCM = OFF        // Fail-Safe Clock Monitor Enable bit (Fail-Safe Clock Monitor enabled)
 #pragma config IESO = ON        // Internal External Switchover bit (Internal External Switchover mode enabled)
 
 // CONFIG2L
