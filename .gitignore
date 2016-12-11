@@ -7,3 +7,4 @@ mplab/LED.X/dist/*
 eagle/.schematic.brd.lck
 eagle/.schematic.sch.lck
 ~$Components.xlsx
+node_modules/**
