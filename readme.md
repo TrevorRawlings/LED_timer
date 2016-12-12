@@ -66,5 +66,27 @@ Software is in the `mplab\LED.X` subfolder.
 
 # Configuring FreeCAD
 
+1. Configure eaglepcb2freecad. Open freeCAD and then from the top menu go Edit > Preferences.  In the window the opens select 'PCB' from the list on the left
 
+  * Set the default board thickness to 1.6mm
+  * Set the Parts:Paths to include the location of the [freecad_eagle_models](https://github.com/TrevorRawlings/freecad_eagle_models) and [electrical_components](https://github.com/TrevorRawlings/electrical_components) git repositories.  If you have run a `npm install` then two git repos will have been cloned into the node_modules subdirectory:
+  
+    <project_folder>\node_modules\electrical_components,
+	<project_folder>\node_modules\freecad_eagle_models\models_1,
+	<project_folder>\node_modules\freecad_eagle_models\models_2,
+	<project_folder>\node_modules\freecad_eagle_models\models_3,
+	<project_folder>\node_modules\freecad_eagle_models\models_4,
+	
+  * Import the parts database `eagle2FreecadPartsDb\freecad-pcb_copy.fpcb`
+  
+    Select 'Printed Circuit Board' `View > Workbench` menu and then click the Assign Models button on the PCB Settings tool bar (see the image below)
+	
+	<img src="images/freecad_assign_models.png" width="400px">
+	
+	In the window that openc click 'Import Database' from the menu on the left.
+    	E:\projects\ALFA_LED\node_modules\electrical_components,E:\projects\ALFA_LED\node_modules\freecad_eagle_models\models_1,E:\projects\ALFA_LED\node_modules\freecad_eagle_models\models_2,E:\projects\ALFA_LED\node_modules\freecad_eagle_models\models_3,E:\projects\ALFA_LED\node_modules\freecad_eagle_models\models_4
+	
+	
+	E:\freeCadModels\models_1,E:\freeCadModels\models_2,E:\freeCadModels\models_3,E:\freeCadModels\models_4,E:\freeCadModels\custom
+	
 
