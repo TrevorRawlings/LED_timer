@@ -45,8 +45,6 @@
 void main(void) {
     unsigned int delay, i;
     
-   // OSCCONbits.IRCF = 5;
-    
     led_configure();
     delay = read_switches();
     

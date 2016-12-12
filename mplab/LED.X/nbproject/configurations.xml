@@ -19,8 +19,7 @@
       <itemPath>system.c</itemPath>
       <itemPath>configuration_bits.c</itemPath>
       <itemPath>switches.c</itemPath>
-      <itemPath>t1_wait.c.old.c</itemPath>
-      <itemPath>t2_wait.c.c</itemPath>
+      <itemPath>t2_wait.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -463,14 +462,6 @@
         <property key="stack-size-main" value="auto"/>
         <property key="stack-type" value="compiled"/>
       </XC8-config-global>
-      <item path="t1_wait.c.old.c" ex="true" overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
     </conf>
   </confs>
 </configurationDescriptor>

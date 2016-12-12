@@ -16,17 +16,22 @@ function echoCommand(command) {
 	return command;
 }
 
+
+var gerberFiles = ['.dri', 'GBL', 'GBO', 'GBS', 'GTL', 'GTO','GTS','TXT','dri','gpi','GML','GTP'].map((extension) => `./eagle/schematic.${extension}`);
+
+
 module.exports = function(grunt) {
 
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json')
+    pkg: grunt.file.readJSON('package.json'),
 	shell: {
         eagle_images: {
             command: function () { return echoCommand(eaglePath + ' ./eagle/schematic.sch -C "EXPORT image schematic.png 1000; BOARD;EXPORT image pcb.png 1000;PRINT FILE ./pcb.pdf;QUIT"'); } 
         }
     },
 	clean: {
-		images: ['schematic.png', 'pcb.png', 'pcb.pdf']
+		images: ['schematic.png', 'pcb.png', 'pcb.pdf'],
+		eagle: [].concat(gerberFiles,['./eagle/schematic.b#*','./eagle/schematic.s#*', './eagle/schematic_0*.pro','./eagle/schematic_0*.job'])
 	}
   });
 
