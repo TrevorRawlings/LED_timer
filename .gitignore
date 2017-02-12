@@ -9,3 +9,7 @@ eagle/.schematic.sch.lck
 ~$Components.xlsx
 node_modules/**
 .idea/*
+eagle/eagleUp/*
+invoices/*
+sketchup/*
+models/*

@@ -1,11 +1,19 @@
 LED timer
 
+<img src="WP_20170125_08_37_55_Pro_2.jpg">
+
 # Design Overview
 ## Mechanical
 
-To fit within the waterproof housing the timer can be at most a 44mm diameter cylinder of height 15mm.
+To fit within the waterproof housing the timer is limited to a 44mm diameter cylinder of height 15mm.
 
 <img src="mechanical.png">
+
+The case has been designed using [freeCad](https://www.freecadweb.org/) see the [Configuring FreeCad](#configuring-freecad) 
+section below for help setting it up. 
+
+The design files are in the `freeCad` subdirectory and the finished designs have been 
+uploaded to sculpteo ([sculpteo/case2-66](https://www.sculpteo.com/en/print/case2-66/AvhQv5jK) and [sculpteo/bottom-1007](https://www.sculpteo.com/en/print/bottom-1007/qzUkbDYg)).
 
 ## Electrical
 
@@ -58,7 +66,7 @@ Software is in the `mplab\LED.X` subfolder.
 
 2. [Grunt](http://gruntjs.com/getting-started#installing-the-cli)
 
-   Used to automate some tasks.  Not strictly needed if 
+   Used to automate some tasks.
    
    ```
    npm install -g grunt-cli
