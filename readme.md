@@ -1,6 +1,4 @@
-LED timer
-
-<img src="images/WP_20170125_08_37_55_Pro_2.jpg">
+<img src="images/WP_20170125_08_37_55_Pro_2.jpg" width="400px">
 
 # Design Overview
 ## Mechanical
@@ -9,10 +7,10 @@ To fit within the waterproof housing the timer is limited to a 44mm diameter cyl
 
 <img src="mechanical.png">
 
-The case has been designed using [freeCad](https://www.freecadweb.org/) see the [Configuring FreeCad](#configuring-freecad) 
+The case has been designed using [freeCad](https://www.freecadweb.org/). See the [Configuring FreeCad](#configuring-freecad) 
 section below for help setting it up. 
 
-The design files are in the `freeCad` subdirectory and the finished designs have been 
+The design files are in the `./freeCad` subdirectory and the finished designs have been 
 uploaded to sculpteo ([sculpteo/case2-66](https://www.sculpteo.com/en/print/case2-66/AvhQv5jK) and [sculpteo/bottom-1007](https://www.sculpteo.com/en/print/bottom-1007/qzUkbDYg)).
 
 ## Electrical
