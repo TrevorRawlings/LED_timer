@@ -55,7 +55,7 @@ void main(void) {
         __delay_ms(50);
     }
     
-    wait(delay * 60);
+    wait(delay * 60 * 15);
     
     led_on();
     trigger_LAMP();
