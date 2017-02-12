@@ -1,6 +1,6 @@
 LED timer
 
-<img src="WP_20170125_08_37_55_Pro_2.jpg">
+<img src="images/WP_20170125_08_37_55_Pro_2.jpg">
 
 # Design Overview
 ## Mechanical
